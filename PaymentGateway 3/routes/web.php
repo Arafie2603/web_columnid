@@ -20,8 +20,7 @@ Route::get('/payment', [WebController::class, 'index']);
 Route::post('/payment', [WebController::class, 'payment_post']);
 Route::post('/payments', [WebController::class, 'index']);
 Route::post('transaksi', [TransaksiController::class, 'create']);
-Route::post('tambah_produk', [ProdukController::class, 'store'])->name('tambah_produk.tambah');
-Route::get('tambah_produk', [ProdukController::class, 'store']);
+Route::post('tambah_produk', [ProdukController::class, 'store']);
 Route::get('produk', [ProdukController::class, 'index']);
 // Route::post('payment', [WebController::class, 'index']);
 

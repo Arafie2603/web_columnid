@@ -11,8 +11,8 @@ class ProdukController extends Controller
      */
     public function index()
     {
-        $data = DB::table('produks')->select('*')->findAll();
-        return view('admin/produk', compact('data'));
+      
+        return view('admin/produk');
     }
 
     /**
@@ -30,11 +30,11 @@ class ProdukController extends Controller
     {
         // dd('sasa');
         $produk = new Produk();
-        $produk->kode_produk = "SSL-001";
-        $produk->nama_produk = "Aubre";
-        $produk->foto_produk = "labict.png";
-        $produk->harga = 50000;
-        $produk->stok = 100;
+        $produk->kode_produk = $request->kode_produk;
+        $produk->nama_produk = $request->nama_produk;
+        $produk->foto_produk = $request->file('foto_produk')->store('produk', 'public');
+        $produk->harga = $request->harga;
+        $produk->stok = $request->stok;
         $produk->save();
         return redirect()->back();
     }

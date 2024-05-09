@@ -9,9 +9,13 @@
         <h2>Best Seller!</h2>
         <div class="products">
             <div class="product">
-                <img src="assets/aubree.jpg" alt="Aubree Shirt">
-                <h3>Aubree Shirt</h3>
-                <p>Rp 67.900</p>
+                @foreach ($data as $item)
+                    
+                @endforeach
+                <img src="{{ "/storage/" . $item->foto_produk }}" width="200" height="200" alt="Aubree Shirt">
+                <h3{{ $item->nama_produk }}</h3>
+                <p>{{ $item->kode_produk }}</p>
+                <p>{{ $item->harga }}</p>
                 <button>Tambah ke Keranjang</button>
             </div>
         </div>
