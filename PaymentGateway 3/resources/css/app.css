@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.search input, .search button {
+    padding: 5px;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.payment-details, .order-summary {
+    width: 48%;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.payment-details form {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-details label {
+    margin-top: 0px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.footer div {
+    margin: 0;
+}
+.tester {
+    color: aqua;
+}
